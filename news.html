@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <script src="https://kit.fontawesome.com/99e2ff344d.js" crossorigin="anonymous"></script>
+  <meta charset="UTF-8" />
+  <title>DTG - News</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <nav id="navbar">
+    <script type="text/javascript" src="navbar.js"></script>
+  </nav>
+
+  <main>
+    <h1>Latest News</h1>
+    <div id="news-container">Loading news...</div>
+  </main>
+
+  <footer id="footer">
+    <script type="text/javascript" src="footer.js"></script>
+  </footer>
+
+  <script>
+    fetch('data/news.json')
+      .then(response => response.json())
+      .then(newsItems => {
+        const container = document.getElementById('news-container');
+        container.innerHTML = '';
+
+        newsItems.sort((a, b) => new Date(b.date) - new Date(a.date));
+
+        newsItems.forEach(item => {
+          const newsDiv = document.createElement('div');
+          newsDiv.className = 'news-item';
+
+          let imgHtml = '';
+          if (item.image) {
+            imgHtml = `<img src="${item.image}" alt="${item.title} image" class="news-image" />`;
+          }
+
+          newsDiv.innerHTML = `
+            ${imgHtml}
+            <div class="news-text">
+                <div class="news-date">${item.date}</div>
+                <div class="news-title">${item.title}</div>
+                <div class="news-content">${item.content}</div>
+            </div>
+            `;
+
+          container.appendChild(newsDiv);
+        });
+      })
+      .catch(error => {
+        const container = document.getElementById('news-container');
+        container.innerText = 'Failed to load news.';
+        console.error('Error loading news:', error);
+      });
+  </script>
+</body>
+</html>
