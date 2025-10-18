@@ -1,0 +1,263 @@
+@import url('https://fonts.googleapis.com/css2?family=Huninn&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Baloo+2:wght@400..800&display=swap');
+
+html, body {
+  height: 100%;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+body {
+  font-family: "Huninn", sans-serif;
+  text-align: center;
+  color: white;
+  background-image:
+    repeating-conic-gradient(#0000000e 0% 25%, transparent 0% 50%),
+    linear-gradient(0deg, rgb(99, 112, 154) 0%, rgb(88, 79, 128) 100%);
+  background-blend-mode: normal;
+  background-repeat: repeat, no-repeat;
+  background-size: 20px 20px, cover;
+  background-position: top left, center center;
+  background-attachment: fixed, fixed;
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+}
+
+main {
+  flex: 1 0 auto;
+}
+
+h1 {
+    font-family: "Baloo 2", sans-serif;
+}
+
+img {
+    border-radius: 5px;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+    transition: 0.3s ease-out;
+}
+
+img:hover {
+    transform: scale(1.01);
+    box-shadow: 4px 4px 7px rgba(0, 0, 0, 0.2);
+}
+
+a {
+  text-decoration: none;
+  color: rgb(117, 234, 255);
+  text-shadow: 0px 0px 8px rgba(255, 255, 255, 0.5);
+  transition: 0.3s ease-out;
+}
+
+a:hover {
+  color: rgb(255, 255, 255);
+}
+
+.darkbutton {
+    font-family: "Huninn", sans-serif;
+    padding: 15px 15px;
+    background-color: rgb(40, 32, 74);
+    color: white;
+    border: 2px solid rgb(31, 22, 36);
+    border-radius: 5px;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+    transition: 0.3s ease-out;
+}
+
+.darkbutton:hover {
+    padding: 18px 18px;
+    background-color: rgb(41, 31, 69);
+    box-shadow: 4px 4px 7px rgba(0, 0, 0, 0.2);
+}
+
+button {
+    font-family: "Huninn", sans-serif;
+    padding: 15px 15px;
+    background-color: rgb(65, 51, 117);
+    color: white;
+    border: 2px solid rgb(34, 35, 59);
+    border-radius: 5px;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+    transition: 0.3s ease-out;
+}
+
+button i {
+  margin-right: 8px;
+}
+
+button:hover {
+    padding: 18px 18px;
+    background-color: rgb(92, 63, 138);
+    box-shadow: 4px 4px 7px rgba(0, 0, 0, 0.2);
+}
+
+nav {
+  border-radius: 5px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: rgb(60, 51, 86);
+  padding: 6px;
+  z-index: 99;
+}
+
+.logo {
+  width: 60px;
+  height: auto;
+  margin: 0;
+  border-radius: 0px;
+  box-shadow: none;
+}
+
+.logo:hover {
+    box-shadow: none;
+    border-radius: 0px;
+    transform: scale(1.05);
+}
+
+.icon {
+  width: 10px;
+  height: auto;
+  margin: 0;
+  box-shadow: none;
+  border-radius: 0px;
+}
+
+.nav-buttons {
+  display: flex;
+  gap: 10px;
+}
+
+.navlink {
+  width: auto;
+  padding: 5px;
+  margin: 8px 5px 8px 0;
+  display: block;
+}
+
+footer {
+    font-family: "Huninn", sans-serif;
+    border-radius: 5px;
+    background-color: rgb(60, 51, 86);
+    color: white;
+    margin-top: 50px;
+    padding: 4px;
+    text-align: center;
+}
+
+.games-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  padding: 20px;
+}
+
+.game-card {
+  position: relative;
+  background-color: rgba(255, 255, 255, 0.1);
+  border-radius: 20px;
+  padding: 20px;
+  width: 220px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+  text-align: center;
+  backdrop-filter: blur(10px);
+  transition: 0.3s ease-out;
+}
+
+.game-card:hover {
+  background-color: rgba(255, 255, 255, 0.15);
+}
+
+.game-image {
+  width: 100%;
+  border-radius: 15px;
+}
+
+.game-card h2 {
+  margin-top: 10px;
+  font-size: 1.5em;
+}
+
+.game-tagline {
+  font-style: italic;
+  margin: 10px 0;
+}
+
+.game-status {
+  font-weight: bold;
+}
+
+.game-websoon {
+  padding-top: 15px;
+  font-weight: bold;
+}
+
+.game-button {
+  display: inline-block;
+  margin-top: 10px;
+  text-decoration: none;
+}
+
+.featured-label {
+  position: absolute;
+  top: -15px;
+  left: 20px;
+  background: #ff7300;
+  color: rgb(255, 255, 255);
+  font-weight: bold;
+  padding: 5px 15px;
+  border-radius: 15px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.3);
+  font-size: 0.9rem;
+  white-space: nowrap;
+}
+
+.button-row {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.news-item {
+  padding: 1rem;
+  margin-bottom: 1.5rem;
+  background-color: rgba(255, 255, 255, 0.1);
+  border-radius: 20px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+  display: flex;
+  gap: 1rem;
+  align-items: flex-start;
+}
+
+.news-image {
+  max-width: 150px;
+  width: 100%;
+  height: auto;
+  border-radius: 6px;
+  flex-shrink: 0;
+}
+
+.news-text {
+  flex: 1; /* take remaining space */
+  color: white;
+}
+
+.news-date {
+  font-weight: bold;
+  color: #cccccc;
+  margin-bottom: 0.3rem;
+  font-size: 0.9rem;
+}
+
+.news-title {
+  font-family: "Baloo 2", sans-serif;
+  font-size: 1.4rem;
+  margin: 0.3rem 0 0.8rem 0;
+}
+
+.news-content {
+  font-size: 1rem;
+  line-height: 1.4;
+}
